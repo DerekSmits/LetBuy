@@ -7,8 +7,9 @@ namespace LetBuy.Models
 {
     public class Book
     {
+        public ushort price { set; get; }
         public int id { set; get; }
-        public int price { set; get; }
+        public int categoryID { get; set; }
         public string img { set; get; }
         public string name { set; get; }
         public string longDesc { set; get; }
