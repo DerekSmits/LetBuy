@@ -10,5 +10,6 @@ namespace LetBuy.Interfaces
     {
         public IEnumerable<Book> Books { get; set; }
         public IEnumerable<Book> Fav { get; }
+        Book getBook(int bookID);
     }
 }
