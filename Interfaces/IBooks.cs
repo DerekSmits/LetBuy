@@ -8,8 +8,8 @@ namespace LetBuy.Interfaces
 {
     interface IBooks
     {
-        public IEnumerable<Book> Books { get; set; }
+        public IEnumerable<Book> Books { get; }
         public IEnumerable<Book> Fav { get; }
-        Book getBook(int bookID);
+        Book GetBook(int bookID);
     }
 }

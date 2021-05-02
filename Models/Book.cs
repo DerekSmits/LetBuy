@@ -14,6 +14,7 @@ namespace LetBuy.Models
         public string name { set; get; }
         public string longDesc { set; get; }
         public string shortDesc { set; get; }
+        public string author { get; set; }
         public bool isAvailable { set; get; }
         public bool isFavourite { set; get; }
         public virtual Category category { set; get; }
