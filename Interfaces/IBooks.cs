@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LetBuy.Interfaces
 {
-    interface IBooks
+     public interface IBooks
     {
         public IEnumerable<Book> Books { get; }
         public IEnumerable<Book> Fav { get; }
