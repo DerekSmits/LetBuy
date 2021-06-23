@@ -28,7 +28,27 @@ namespace LetBuy
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+            //   app.UseMvcWithDefaultRoute();
+            app.Map("/about", About);
+            app.Map("/help", Help);
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Page not found. Suddenly(");
+            });
+        }
+        private static void About(IApplicationBuilder app)
+        {
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Created By DS");
+            });
+        }
+        private static void Help(IApplicationBuilder app)
+        {
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Tis site created for git portfolio Yemelyanov Rostyslav");
+            });
         }
     }
 }
