@@ -1,3 +1,4 @@
+using LetBuy.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -29,6 +30,7 @@ namespace LetBuy
             app.UseStatusCodePages();
             app.UseStaticFiles();
             //   app.UseMvcWithDefaultRoute();
+            app.UseCheck();
             app.Map("/about", About);
             app.Map("/help", Help);
             app.Run(async (context) =>
